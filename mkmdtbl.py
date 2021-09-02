@@ -8,6 +8,7 @@ SEP = ">>> "
 SKIP = "----"
 
 import re
+import os
 
 def rep_code( s ):
     return re.sub(r"`(.*?)`",r"<code>\1</code>",s)
@@ -23,3 +24,14 @@ def printtable( filename ):
 
 def qp( name ):
     printtable( "txts/"+name+".txt" )
+
+def relay( ):
+    for entry in os.scandir("txts"):
+        data = ""
+        with open("txts/"+entry.name) as infile:
+            data = table(infile.read())
+        with open("out/"+entry.name,'w') as outfile:
+            outfile.write(data)
+
+if __name__ = "__main__":
+    relay( )
