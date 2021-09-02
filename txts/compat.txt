@@ -1,3 +1,5 @@
+$Functions
+
 #RegisterMod
 `modName`(string) ~ `parent`(nil|table)
 `mod`(Mod)

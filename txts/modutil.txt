@@ -1,3 +1,5 @@
+$Functions
+
 #Proxy
 `data`(table), `meta`(nil|table)
 `proxy`(*table)

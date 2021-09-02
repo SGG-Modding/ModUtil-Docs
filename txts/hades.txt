@@ -1,3 +1,5 @@
+$Functions
+
 #CloseMenu
 `screen`(Screen), `button`(Button)
 ----

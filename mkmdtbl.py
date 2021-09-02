@@ -6,14 +6,15 @@ COL = "\n</td><td>\n\t"
 COLSEP = "\n</td><td colspan=\"2\">\n\t"
 SEP = ">>> "
 SKIP = "----"
+SECTIONCHR = "$"
 ANCHORCHR = "#"
 ANCHOR = """<a id="user-content-{1}" href="#{1}" aria-hidden="true">{0}</a>"""
 
 import re
 import os
 
-def get_anchor( s ):
-    clean = re.sub(r"[^A-Za-z0-9\-]","",s.replace(" ","-").lower( ))
+def get_anchor( s, section="" ):
+    clean = re.sub(r"[^A-Za-z0-9\-]","",(section + s).replace(" ","-").lower( ))
     return ANCHOR.format(s,clean)
 
 def rep_code( s ):
@@ -22,10 +23,18 @@ def rep_code( s ):
 def table( txt ):
     txt = rep_code( txt )
     t = list(map(lambda x: x.split("\n"), txt.split("\n\n")))
-    for r in t:
+    section = ""
+    sections = []
+    for i,r in enumerate(t):
         c = r[0]
+        if c[0] == SECTIONCHR:
+            section = c[1:]+"-"
+            sections.append(i)
+            continue
         if c[0] == ANCHORCHR:
-            r[0] = get_anchor(c[1:])
+            r[0] = get_anchor(c[1:], section)
+    for i in sorted(sections,reverse=True):
+        del t[i]
     return START+ROW.join(map(lambda r: COL.join(r).replace(SKIP,"").replace(COL+SEP,COLSEP), t)).replace(ROW+SEP,ROWSEP)+END
     
 def printtable( filename ):
