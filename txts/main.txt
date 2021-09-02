@@ -1,3 +1,8 @@
+$Tables
+
+#Mod.Data
+>>> Special proxy for the `ModData` global table as a save-safety preserving interface
+
 $Functions
 
 #Mod.Register
@@ -11,14 +16,26 @@ $Functions
 `value`(table)
 `proxy`(*table)
 
+----
+>>> Returns a `proxy` for the `value` such that any operations on the `proxy` preserve the save-safety (in Hades) of the `value` table
+
 #Mod.Data
 `mod`(Mod)
-`modData`(*table)
+`proxy`(*table)
+
+----
+>>> Retrieves a `proxy` for the saved data table (value in the `ModData` global table) corresponding to the `mod` (creates the data table (and `ModData`) if it doesn't yet exist) via `ModUtil.Entangled.ModData`
 
 #LoadOnce
-`func`((...)->(...))
+`func`((`args`)->())
 ----
 
-#CancelLoadOnce
-`func`((...)->(...))
 ----
+>>> Enlists `func` to be called once on the next `OnAnyLoad` trigger
+
+#CancelLoadOnce
+`func`((`args`)->())
+----
+
+----
+>>> Cancels the enlistment of `func` by `ModUtil.LoadOnce`
