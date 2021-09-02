@@ -1,0 +1,59 @@
+CloseMenu
+`screen`(Screen), `button`(Button)
+----
+
+OpenMenu
+`group`(string), `close`((`screen`(Screen), `button`(Button)->()), `open`((`screen`(Screen), `button`(Button)->())
+`screen`(Screen)
+
+DimMenu
+`screen`(Screen)
+----
+
+UndimMenu
+`screen`(Screen)
+----
+
+PostOpenMenu
+`screen`(Screen)
+`screen`(Screen)
+
+GetMenuScreen
+`group`(string)
+`screen`(Screen)
+
+PrintDisplay
+`text`, `delay`(nil|number), `color`(nil|Color)
+----
+
+PrintOverhead
+`text`, `delay`(nil|number), `color`(nil|Color), `dest`(Obstacle)
+----
+
+ClosePrintStack
+----
+----
+
+OrderPrintStack
+`screen`(Screen), `components`(Screen.Components)
+----
+
+PrintStack
+`text`, `delay`(nil|number), `color`(nil|Color), `bgcol`(nil|Color), `fontsize`(nil|Natural), `font`(nil|string), `sound`(nil|string)
+----
+
+PrintStackChunks
+`text`, `linespan`(nil|Natural), `delay`(nil|number), `color`(nil|Color), `bgcol`(nil|Color), `fontsize`(nil|Natural), `font`(nil|string), `sound`(nil|string)
+----
+
+NewMenuYesNo
+`group`(string), `close`((`screen`(Screen), `button`(Button)->()), `open`((`screen`(Screen), `button`(Button)->()), `yes`(nil|(`screen`(Screen), `button`(Button)->()), `no`(nil|(`screen`(Screen), `button`(Button)->()), `title`(nil|string), `body`(nil|string), `yesText`(nil|string), `noText`(nil|string), `icon`(nil|string), `iconScale`(nil|number)
+`screen`(Screen)
+
+CloseMenuYesNo
+`screen`(Screen), `button`(Button)
+----
+
+RandomElement
+`data`(table), `rng`(Rng)
+`element`

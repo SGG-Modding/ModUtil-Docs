@@ -1,0 +1,55 @@
+rawnext
+`obj`(table) `key`
+`key`, `value`
+
+next
+`obj`(table) `key`
+`key`, `value`
+
+rawpairs
+`obj`(table)
+`iter`((`obj`(table),`key`)->(`key`,`value`)), `obj`(table)
+
+qrawpairs
+`obj`(table)
+`iter`((`obj`(table),`key`)->(`key`,`value`)), `obj`(table)
+
+rawinext
+`obj`(table), `idx`(nil|Natural)
+`idx`(nil|Natural), `value`
+
+inext
+`obj`(table), `idx`(nil|Natural)
+`idx`(nil|Natural), `value`
+
+rawipairs
+`obj`(table)
+`iter`((`obj`(table),`idx`(nil|Natural))->(`idx`(nil|Natural),`value`)), `obj`(table)
+
+qrawipairs
+`obj`(table)
+`iter`((`obj`(table),`idx`(nil|Natural))->(`idx`(nil|Natural),`value`)), `obj`(table)
+
+getfenv
+`func`((...)->(...))
+`env`(nil|table)
+
+setfenv
+`func`((...)->(...)) `env`(table)
+----
+
+table.rawinsert
+`data`(Array), `pos`(nil|Natural) ~ value
+----
+
+table.insert
+`data`(Array), `pos`(nil|Natural) ~ value
+----
+
+table.rawremove
+`data`(Array), `pos`(nil|Natural)
+`value`
+
+table.remove
+`data`(Array), `pos`(nil|Natural)
+`value`

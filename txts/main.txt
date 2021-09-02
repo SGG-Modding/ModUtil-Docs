@@ -1,0 +1,22 @@
+Mod.Register
+`modName`(string) ~ `parent`(nil|table)
+`mod`(Mod)
+
+----
+>>> Creates a new table `mod` with `ModUtil.Mod` as its fallback metamethod, and assigns it to the field [`modName`] in the `parent` (or global) table, and associates the path to the table in `ModUtil.Identifiers`
+
+Entangled.ModData
+`value`(table)
+`proxy`(*table)
+
+Mod.Data
+`mod`(Mod)
+`modData`(*table)
+
+LoadOnce
+`func`((...)->(...))
+----
+
+CancelLoadOnce
+`func`((...)->(...))
+----

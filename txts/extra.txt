@@ -1,0 +1,95 @@
+IndexArray.Wrap
+`base`(table), `index`(Array), `wrap`((`base`,...)->(...)), `mod`(Mod)
+`success`(boolean)
+
+IndexArray.Context.Wrap
+`base`(table), `index`(Array), `context`(()->()), `mod`(Mod)
+`success`(boolean)
+
+IndexArray.Context.Wrap.Static
+`base`(table), `index`(Array), `context`(()->()), `mod`(Mod)
+`success`(boolean)
+
+IndexArray.Decorate
+`base`(table), `index`(Array), `deco`((`base`)->(`post`)), `mod`(Mod)
+`success`(boolean)
+
+IndexArray.Decorate.Pop
+`base`(table), `index`(Array)
+`success`(boolean)
+
+IndexArray.Decorate.Refresh
+`base`(table), `index`(Array)
+`success`(boolean)
+
+IndexArray.Override
+`base`(table), `index`(Array), `value`, `mod`(Mod)
+`success`(boolean)
+
+IndexArray.Restore
+`base`(table), `index`(Array)
+`success`(boolean)
+
+IndexArray.Overriden
+`base`(table), `index`(Array)
+`value`
+
+IndexArray.Original
+`base`(table), `index`(Array)
+`value`
+
+IndexArray.ReferFunction
+`base`(table), `index`(Array)
+`func`((...)->(...))
+
+IndexArray.ReferTable
+`base`(table), `index`(Array)
+`table`(*table)
+
+Path.Wrap
+`path`(Path), `wrap`((`base`,...)->(...)), `mod`(Mod)
+`success`(boolean)
+
+Path.Context.Wrap
+`path`(Path), `context`(()->()), `mod`(Mod)
+`success`(boolean)
+
+Path.Context.Wrap.Static
+`path`(Path), `context`(()->()), `mod`(Mod)
+`success`(boolean)
+
+Path.Decorate
+`path`(Path), `deco`((`base`)->(`post`)), `mod`(Mod)
+`success`(boolean)
+
+Path.Decorate.Pop
+`path`(Path)
+`success`(boolean)
+
+Path.Decorate.Refresh
+`path`(Path)
+`success`(boolean)
+
+Path.Override
+`path`(Path), `value`, `mod`(Mod)
+`success`(boolean)
+
+Path.Restore
+`path`(Path)
+`success`(boolean)
+
+Path.Overriden
+`path`(Path)
+`value`
+
+Path.Original
+`path`(Path)
+`value`
+
+Path.ReferFunction
+`path`(Path)
+`func`((...)->(...))
+
+Path.ReferTable
+`path`(Path)
+`table`(*table)

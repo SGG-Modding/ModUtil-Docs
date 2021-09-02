@@ -1,0 +1,387 @@
+Proxy
+`data`(table), `meta`(nil|table)
+`proxy`(*table)
+
+Raw
+`obj`(table)
+`raw`(*table)
+
+Callable
+`obj`(table|((...)->(...)))
+`callable`(boolean)
+
+Callable.Get
+`obj`(table|((...)->(...)))
+`parent`(nil|table), `func`(nil|(`self`,...)->(...))
+
+Callable.Set
+`obj`(table), `func`(nil|(`self`,...)->(...))
+`parent`(nil|*table), `func`(nil|(`self`,...)->(...))
+
+Callable.Map
+`obj`(table), `func`(nil|(`self`,...)->(...))
+`parent`(nil|*table), `func`(nil|(`self`,...)->(...))
+
+Callable.Func.Get
+`obj`(table|((...)->(...)))
+`func`(nil|(`self`,...)->(...))
+
+Callable.Func.Set
+`obj`(table), `func`(nil|(`self`,...)->(...))
+`func`(nil|(`self`,...)->(...))
+
+Callable.Func.Map
+`obj`(table), `func`(nil|(`self`,...)->(...))
+`func`(nil|(self,...)->(...))
+
+Args.Map
+`map`((`in`)->(`out`)), ...
+...
+
+Args.Take
+`n`(Natural), ...
+...
+
+Args.Drop
+`n`(Natural), ...
+...
+
+Table.Map
+`tbl`(table), `map`((in)->(out))
+`out`(tbl)
+
+Table.Mutate
+`tbl`(table), `map`((in)->(out))
+----
+
+Table.Replace
+`target`(table), `data`(table)
+----
+
+Table.UnKeyed
+`in`(table)
+`keyed`(boolean)
+
+String.Join
+`sep`(string), ...(string)
+`out`(string)
+
+String.Chunk
+`text`(string), `chunkSize`(Natural), `maxChunks`(Natural)
+`chunks`(Array{string})
+
+ToString
+`object`
+`repr`(string)
+
+ToString.Address
+`object`(table|(...)->(...)|thread|userdata)
+`repr`(string)
+
+ToString.Static
+`object`(table|(...)->(...)|thread|userdata)
+`repr`(string)
+
+ToString.Value
+`object`
+`repr`(string)
+
+ToString.Key
+`object`
+`repr`(string)
+
+ToString.TableKeys
+`object`(table)
+`repr`(string)
+
+ToString.Shallow
+`object`
+`repr`(string)
+
+ToString.Deep
+`object`, `seen`(nil|table)
+`repr`(string)
+
+ToString.Deep.NoNamespaces
+`object`, `seen`(nil|table)
+`repr`(string)
+
+ToString.Deep.Namespaces
+`object`, `seen`(nil|table)
+`repr`(string)
+
+Print
+...
+----
+
+Print.ToFile
+`file`(string|File), ...
+----
+
+Print.Debug
+...
+----
+
+Print.Traceback
+`level`(Natural|nil)
+----
+
+Print.DebugInfo
+`level`(Natural|nil)
+----
+
+Print.Namespaces
+`level`(Natural|nil)
+----
+
+Print.Variables
+`level`(Natural|nil)
+----
+
+DebugCall
+`func`((...)->(...)), ...
+...
+
+Array.Slice
+`state`(Array), `start`(Integer|nil), `stop`(Integer|nil), `step`(Integer|nil)
+`slice`(Array)
+
+Array.Copy
+`data`(Array)
+`copy`(Array)
+
+Array.Join
+...(Array)
+`out`(Array)
+
+Table.Copy
+`data`(table)
+`copy`(table)
+
+Table.Copy.Deep
+`data`(table)
+`copy`(table)
+
+Table.Clear
+`data`(table)
+`data`(table)
+
+Table.Transpose
+`data`(table)
+`flipped`(table)
+
+Table.Flip
+`data`(table)
+`data`(table)
+
+Table.NilMerge
+`in`(table), `nil`(table)
+`in`(table)
+
+Table.Merge
+`in`(table), `set`(table)
+`in`(table)
+
+IndexArray.Get
+`base`(table), `index`(table)
+`result`
+
+IndexArray.Set
+`base`(table), `index`(Array), `value`
+`success`(boolean)
+
+IndexArray.Map
+`base`(table), `index`(Array)
+`success`(boolean)
+
+Path.Join
+...(Path)
+`path`(Path)
+
+Path.Map
+`path`(Path)
+`success`(boolean)
+
+Path.IndexArray
+`path`(Path)
+`index`(Array)
+
+Path.Get
+`path`(Path)
+`result`
+
+Path.Set
+`path`(Path), `value`
+`success`(boolean)
+
+Path.Map
+`path`(Path)
+`success`(boolean)
+
+StackLevel
+`level`(nil|Natural)
+`info`(nil|*table)
+
+StackLevels
+`level`(nil|Natural)
+`info`(nil|*table)
+
+UpValues
+`func`((...)->(...)|Natural|nil)
+`ups`(*table)
+
+UpValues.Ids
+`func`((...)->(...)|Natural|nil)
+`ups`(*table)
+
+UpValues.Values
+`func`((...)->(...)|Natural|nil)
+`ups`(*table)
+
+UpValues.Names
+`func`((...)->(...)|Natural|nil)
+`ups`(*table)
+
+UpValues.Stacked
+`func`((...)->(...)|Natural|nil)
+`ups`(*table)
+
+Locals
+`level`(Natural|nil)
+`locals`(*table)
+
+Locals.Values
+`level`(Natural|nil)
+`locals`(*table)
+
+Locals.Names
+`level`(Natural|nil)
+`locals`(*table)
+
+Locals.Stacked
+`level`(Natural|nil)
+`locals`(*table)
+
+Entangled.Union
+...(table)
+`union`(*table)
+
+Entangled.Union.Add
+`union`(*table), ...(table)
+----
+
+Entangled.Union.Sub
+`union`(*table), ...(table)
+----
+
+Entangled.Map
+----
+`pair`(table{*table})
+
+Entangled.Map.Unique
+----
+`pair`(table{*table})
+
+Context
+`prep`((`info`)->(...)), `post`((`info`)->(...))
+`context`(*table)
+
+Context.Data
+`data`(table), `context`(()->())
+----
+
+Context.Meta
+`object`, `context`(()->())
+----
+
+Context.Call
+`func`((...)->(...)), `context`(()->())
+----
+
+Context.Wrap
+`func`((...)->(...)), `context`(()->()), `mod`(Mod)
+----
+
+Context.Wrap.Static
+`func`((...)->(...)), `context`(()->()), `mod`(Mod)
+----
+
+Node.New
+`parent`(table), `key`(~nil)
+`tbl`(table)
+
+Node.Data.Meta.New
+`object`
+`meta`(table)
+
+Node.Data.Meta.Get
+`object`
+`meta`(table)
+
+Node.Data.Meta.Set
+`object`
+`success`(boolean)
+
+Node.Data.Call.New
+`object`(table|(...)->(...))
+`parent`(nil|table), `func`(nil|(`self`,...)->(...))
+
+Node.Data.Call.Get
+`object`(table|(...)->(...))
+`parent`(nil|table), `func`(nil|(`self`,...)->(...))
+
+Node.Data.Call.Set
+`object`(table|(...)->(...)), `func`(nil|(`self`,...)->(...))
+`success`(boolean)
+
+Node.Data.UpValues.New
+`func`((...)->(...)
+`ups`(*table)
+
+Node.Data.UpValues.Get
+`func`((...)->(...)
+`ups`(*table)
+
+Node.Data.UpValues.Set
+----
+----
+
+Decorate
+`base`, `deco`((`base`)->(`post`)), `mod`(Mod)
+`post`
+
+Wrap
+`base`, `wrap`((`base`,...)->(...)), `mod`(Mod)
+`func`((...)->(...))
+
+Decorate.Pop
+`object`
+`base`
+
+Decorate.Refresh
+`base`
+`refbase`
+
+Override
+`base`, `value`, `mod`(Mod)
+`value`
+
+Restore
+`base`
+`refbase`
+
+Overriden
+`object`
+`value`
+
+Original
+`object`
+`value`
+
+ReferFunction
+`get`((...)->(`obj`)), ...
+`func`((...)->(...))
+
+ReferTable
+`get`((...)->(`obj`)), ...
+`table`(*table)
