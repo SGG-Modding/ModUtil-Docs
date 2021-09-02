@@ -33,5 +33,5 @@ def relay( ):
         with open("out/"+entry.name,'w') as outfile:
             outfile.write(data)
 
-if __name__ = "__main__":
+if __name__ == "__main__":
     relay( )

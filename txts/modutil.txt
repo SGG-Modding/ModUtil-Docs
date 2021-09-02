@@ -32,7 +32,7 @@ Callable.Func.Set
 
 Callable.Func.Map
 `obj`(table), `func`(nil|(`self`,...)->(...))
-`func`(nil|(self,...)->(...))
+`func`(nil|(`self`,...)->(...))
 
 Args.Map
 `map`((`in`)->(`out`)), ...

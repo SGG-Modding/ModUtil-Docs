@@ -1,50 +1,50 @@
 RegisterMod
-modName(string) ~ parent(nil|table)
-mod(Mod)
+`modName`(string) ~ `parent`(nil|table)
+`mod`(Mod)
 
 ValueString
-object
-repr(string)
+`object`
+`repr`(string)
 
 KeyString
-object
-repr(string)
+`object`
+`repr`(string)
 
 TableKeysString
-object(table)
-repr(string)
+`object`(table)
+`repr`(string)
 
 ToShallowString
-object
-repr(string)
+`object`
+`repr`(string)
 
 ToDeepString
-object
-repr(string)
+`object`
+`repr`(string)
 
 ToDeepNoNamespacesString
-object
-repr(string)
+`object`
+`repr`(string)
 
 ToDeepNamespacesString
-object
-repr(string)
+`object`
+`repr`(string)
 
 JoinStrings
-sep(string), ...(string)
-out(string)
+`sep`(string), ...(string)
+`out`(string)
 
 ChunkText
-text(string), chunkSize(Natural), maxChunks(Natural)
-chunks(Array{string})
+`text`(string), `chunkSize`(Natural), `maxChunks`(Natural)
+`chunks`(Array{string})
 
 ReplaceTable
-target(table), data(table)
+`target`(table), `data`(table)
 ----
 
 IsUnKeyed
-in(table)
-keyed(boolean)
+`in`(table)
+`keyed`(boolean)
 
 PrintToFile
 ...(string)
@@ -55,60 +55,60 @@ DebugPrint
 ----
 
 PrintTraceback
-level(Natural|nil)
+`level`(Natural|nil)
 ----
 
 PrintNamespaces
-level(Natural|nil)
+`level`(Natural|nil)
 ----
 
 PrintVariables
-level(Natural|nil)
+`level`(Natural|nil)
 ----
 
 Slice
-state(Array), start(Integer|nil), stop(Integer|nil), step(Integer|nil)
-slice(Array)
+`state`(Array), `start`(Integer|nil), `stop`(Integer|nil), `step`(Integer|nil)
+`slice`(Array)
 
 NewTable
-parent(table), key(~nil)
-tbl(table)
+`parent`(table), `key`(~nil)
+`tbl`(table)
 
 SafeGet
-base(table), index(Array)
-result
+`base`(table), `index`(Array)
+`result`
 
 SafeSet
-base(table), index(Array), value
-success(boolean)
+`base`(table), `index`(Array), `value`
+`success`(boolean)
 
 MapNilTable
-in(table), nil(table)
-in(table)
+`in`(table), `nil`(table)
+`in`(table)
 
 MapSetTable
-in(table), set(table)
-in(table)
+`in`(table), `set`(table)
+`in`(table)
 
 JoinIndexArrays
 ...(Array)
-out(Array)
+`out`(Array)
 
 PathToIndexArray
-path(Path)
-index(Array)
+`path`(Path)
+`index`(Array)
 
 PathGet
-path(Path)
-value
+`path`(Path)
+`value`
 
 PathSet
-path(Path), value
-success(boolean)
+`path`(Path), `value`
+`success`(boolean)
 
 WrapFunction
-base(table), index(Array), wrap((base,...)->(...)), mod(Mod)
-success(boolean)
+`base`(table), `index`(Array), `wrap`((`base`,...)->(...)), `mod`(Mod)
+`success`(boolean)
 
 RewrapFunction
 `base`(table), `index`(Array)
@@ -175,7 +175,7 @@ MapTable
 `mapped`(table)
 
 WrapWithinFunction
-`base`(table), `index`(Array), `env`(Array), `wrap`((`base`, ...)->(...)), mod(Mod)
+`base`(table), `index`(Array), `env`(Array), `wrap`((`base`, ...)->(...)), `mod`(Mod)
 `success`(boolean)
 
 WrapBaseWithinFunction
