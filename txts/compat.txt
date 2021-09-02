@@ -1,4 +1,4 @@
-$Functions
+$Func
 
 #RegisterMod
 `modName`(string) ~ `parent`(nil|table)
@@ -37,12 +37,12 @@ $Functions
 `out`(string)
 
 #ChunkText
-`text`(string), `chunkSize`(Natural), `maxChunks`(Natural)
+`text`(string), `chunkSize`(+Int), `maxChunks`(+Int)
 `chunks`(Array{string})
 
 #ReplaceTable
 `target`(table), `data`(table)
-----
+>>>>
 
 #IsUnKeyed
 `in`(table)
@@ -50,26 +50,26 @@ $Functions
 
 #PrintToFile
 ...(string)
-----
+>>>>
 
 #DebugPrint
 ...(string)
-----
+>>>>
 
 #PrintTraceback
-`level`(Natural|nil)
-----
+`level`(+Int|nil)
+>>>>
 
 #PrintNamespaces
-`level`(Natural|nil)
-----
+`level`(+Int|nil)
+>>>>
 
 #PrintVariables
-`level`(Natural|nil)
-----
+`level`(+Int|nil)
+>>>>
 
 #Slice
-`state`(Array), `start`(Integer|nil), `stop`(Integer|nil), `step`(Integer|nil)
+`state`(Array), `start`(Int|nil), `stop`(Int|nil), `step`(Int|nil)
 `slice`(Array)
 
 #NewTable
@@ -153,19 +153,19 @@ $Functions
 ...
 
 #StackedUpValues
-`func`((...)->(...)|Natural|nil)
+`func`((...)->(...)|+Int|nil)
 `ups`(*table)
 
 #StackedLocals
-`level`(Natural|nil)
+`level`(+Int|nil)
 `locals`(*table)
 
 #LocalValues
-`level`(Natural|nil)
+`level`(+Int|nil)
 `locals`(*table)
 
 #LocalNames
-`level`(Natural|nil)
+`level`(+Int|nil)
 `locals`(*table)
 
 #GetBaseBottomUpValues

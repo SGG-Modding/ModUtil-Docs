@@ -1,60 +1,100 @@
-$Functions
+$Data
+
+#PrintStackHeight
++Int
+Number of lines of text visible the next time a fresh print stack is created
+
+#PrintStackCapacity
++Int
+Number of lines of text stored in the buffer of the next fresh print stack created
+
+----
+
+$Func
 
 #CloseMenu
 `screen`(Screen), `button`(Button)
-----
+>>>>
+
+>>>>
+----Safely closes a Menu without breaking input or other menus and calls the closeFunc.
 
 #OpenMenu
 `group`(string), `close`((`screen`(Screen), `button`(Button)->()), `open`((`screen`(Screen), `button`(Button)->())
 `screen`(Screen)
 
+>>>>
+----Begins setup for opening a Menu of a unique group name, closeFunc is called after the menu is closed and after a room transition (which closes all menus forcibly)
+
 #DimMenu
 `screen`(Screen)
-----
+>>>>
+
+>>>>
+----Adds a dim layer behind the screen, must be run before other elements so it is drawn behind them.
 
 #UndimMenu
 `screen`(Screen)
-----
+>>>>
+
+>>>>
+----Makes the dim added by DimMenu completely transparent (to keep the layer order the same)
 
 #PostOpenMenu
 `screen`(Screen)
 `screen`(Screen)
 
+>>>>
+----Ends setup for opening a ModUtil Menu, run after you have attached all the components you want to the menu.
+
 #GetMenuScreen
 `group`(string)
 `screen`(Screen)
 
+>>>>
+----Returns the screen associated with the group (if it was created using this module)
+
 #PrintDisplay
 `text`, `delay`(nil|number), `color`(nil|Color)
-----
+>>>>
+
+>>>>
+----Prints text to the top of the screen. (Can only display one at a time)
 
 #PrintOverhead
 `text`, `delay`(nil|number), `color`(nil|Color), `dest`(Obstacle)
-----
+>>>>
 
-#ClosePrintStack
-----
-----
-
-#OrderPrintStack
-`screen`(Screen), `components`(Screen.Components)
-----
+>>>>
+----Prints text above dest (defaults to the player). (Can only display one at a time)
 
 #PrintStack
-`text`, `delay`(nil|number), `color`(nil|Color), `bgcol`(nil|Color), `fontsize`(nil|Natural), `font`(nil|string), `sound`(nil|string)
-----
+`text`, `delay`(nil|number), `color`(nil|Color), `bgcol`(nil|Color), `fontsize`(nil|+Int), `font`(nil|string), `sound`(nil|string)
+>>>>
+
+>>>>
+----Prints text to a list visible on a panel at the base of the screen. (Displays multiple prints at once)
 
 #PrintStackChunks
-`text`, `linespan`(nil|Natural), `delay`(nil|number), `color`(nil|Color), `bgcol`(nil|Color), `fontsize`(nil|Natural), `font`(nil|string), `sound`(nil|string)
-----
+`text`, `linespan`(nil|+Int), `delay`(nil|number), `color`(nil|Color), `bgcol`(nil|Color), `fontsize`(nil|+Int), `font`(nil|string), `sound`(nil|string)
+>>>>
+
+>>>>
+----Prints block/paragraph text to a list visible on a panel at the base of the screen. (Displays multiple prints at onc
 
 #NewMenuYesNo
 `group`(string), `close`((`screen`(Screen), `button`(Button)->()), `open`((`screen`(Screen), `button`(Button)->()), `yes`(nil|(`screen`(Screen), `button`(Button)->()), `no`(nil|(`screen`(Screen), `button`(Button)->()), `title`(nil|string), `body`(nil|string), `yesText`(nil|string), `noText`(nil|string), `icon`(nil|string), `iconScale`(nil|number)
 `screen`(Screen)
 
+>>>>
+----Creates a stackable Yes/No dialog, use may require a tutorial unto itself.
+
 #CloseMenuYesNo
 `screen`(Screen), `button`(Button)
-----
+>>>>
+
+>>>>
+----Closes a Yes/No dialog, called after any of its three buttons are pressed.
 
 #RandomElement
 `data`(table), `rng`(Rng)

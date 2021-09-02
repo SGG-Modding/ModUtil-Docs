@@ -1,4 +1,4 @@
-$Functions
+$Func
 
 #IndexArray.Wrap
 `base`(table), `index`(Array), `wrap`((`base`,...)->(...)), `mod`(Mod)

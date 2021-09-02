@@ -1,4 +1,32 @@
-$Functions
+$Data
+
+#Mods.Data
+*table
+Map from path to mod object for registered mods
+
+#Mods.Inverse
+*table
+Map from mod object to path for registered mods
+
+#Identifiers.Data
+*table
+Map from object to associated name (name is part of the object's string representation)
+
+#Identifiers.Inverse
+*table
+Map from name to associated object (name is part of the object's string representation)
+
+#Node.Data
+*table
+Collection of traversal nodes for use as special keys in index arrays
+
+#Node.Inverse
+*table
+Lookup table of traversal nodes to distinguish them from regular keys
+
+----
+
+$Func
 
 #Proxy
 `data`(table), `meta`(nil|table)
@@ -41,11 +69,11 @@ $Functions
 ...
 
 #Args.Take
-`n`(Natural), ...
+`n`(+Int), ...
 ...
 
 #Args.Drop
-`n`(Natural), ...
+`n`(+Int), ...
 ...
 
 #Table.Map
@@ -54,11 +82,11 @@ $Functions
 
 #Table.Mutate
 `tbl`(table), `map`((in)->(out))
-----
+>>>>
 
 #Table.Replace
 `target`(table), `data`(table)
-----
+>>>>
 
 #Table.UnKeyed
 `in`(table)
@@ -69,7 +97,7 @@ $Functions
 `out`(string)
 
 #String.Chunk
-`text`(string), `chunkSize`(Natural), `maxChunks`(Natural)
+`text`(string), `chunkSize`(+Int), `maxChunks`(+Int)
 `chunks`(Array{string})
 
 #ToString
@@ -114,38 +142,38 @@ $Functions
 
 #Print
 ...
-----
+>>>>
 
 #Print.ToFile
 `file`(string|File), ...
-----
+>>>>
 
 #Print.Debug
 ...
-----
+>>>>
 
 #Print.Traceback
-`level`(Natural|nil)
-----
+`level`(+Int|nil)
+>>>>
 
 #Print.DebugInfo
-`level`(Natural|nil)
-----
+`level`(+Int|nil)
+>>>>
 
 #Print.Namespaces
-`level`(Natural|nil)
-----
+`level`(+Int|nil)
+>>>>
 
 #Print.Variables
-`level`(Natural|nil)
-----
+`level`(+Int|nil)
+>>>>
 
 #DebugCall
 `func`((...)->(...)), ...
 ...
 
 #Array.Slice
-`state`(Array), `start`(Integer|nil), `stop`(Integer|nil), `step`(Integer|nil)
+`state`(Array), `start`(Int|nil), `stop`(Int|nil), `step`(Int|nil)
 `slice`(Array)
 
 #Array.Copy
@@ -221,47 +249,47 @@ $Functions
 `success`(boolean)
 
 #StackLevel
-`level`(nil|Natural)
+`level`(nil|+Int)
 `info`(nil|*table)
 
 #StackLevels
-`level`(nil|Natural)
+`level`(nil|+Int)
 `info`(nil|*table)
 
 #UpValues
-`func`((...)->(...)|Natural|nil)
+`func`((...)->(...)|+Int|nil)
 `ups`(*table)
 
 #UpValues.Ids
-`func`((...)->(...)|Natural|nil)
+`func`((...)->(...)|+Int|nil)
 `ups`(*table)
 
 #UpValues.Values
-`func`((...)->(...)|Natural|nil)
+`func`((...)->(...)|+Int|nil)
 `ups`(*table)
 
 #UpValues.Names
-`func`((...)->(...)|Natural|nil)
+`func`((...)->(...)|+Int|nil)
 `ups`(*table)
 
 #UpValues.Stacked
-`func`((...)->(...)|Natural|nil)
+`func`((...)->(...)|+Int|nil)
 `ups`(*table)
 
 #Locals
-`level`(Natural|nil)
+`level`(+Int|nil)
 `locals`(*table)
 
 #Locals.Values
-`level`(Natural|nil)
+`level`(+Int|nil)
 `locals`(*table)
 
 #Locals.Names
-`level`(Natural|nil)
+`level`(+Int|nil)
 `locals`(*table)
 
 #Locals.Stacked
-`level`(Natural|nil)
+`level`(+Int|nil)
 `locals`(*table)
 
 #Entangled.Union
@@ -270,18 +298,18 @@ $Functions
 
 #Entangled.Union.Add
 `union`(*table), ...(table)
-----
+>>>>
 
 #Entangled.Union.Sub
 `union`(*table), ...(table)
-----
+>>>>
 
 #Entangled.Map
-----
+>>>>
 `pair`(table{*table})
 
 #Entangled.Map.Unique
-----
+>>>>
 `pair`(table{*table})
 
 #Context
@@ -290,23 +318,23 @@ $Functions
 
 #Context.Data
 `data`(table), `context`(()->())
-----
+>>>>
 
 #Context.Meta
 `object`, `context`(()->())
-----
+>>>>
 
 #Context.Call
 `func`((...)->(...)), `context`(()->())
-----
+>>>>
 
 #Context.Wrap
 `func`((...)->(...)), `context`(()->()), `mod`(Mod)
-----
+>>>>
 
 #Context.Wrap.Static
 `func`((...)->(...)), `context`(()->()), `mod`(Mod)
-----
+>>>>
 
 #Node.New
 `parent`(table), `key`(~nil)
@@ -345,8 +373,8 @@ $Functions
 `ups`(*table)
 
 #Node.Data.UpValues.Set
-----
-----
+>>>>
+>>>>
 
 #Decorate
 `base`, `deco`((`base`)->(`post`)), `mod`(Mod)

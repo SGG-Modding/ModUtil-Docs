@@ -1,4 +1,16 @@
-$Functions
+$Data
+
+#_G
+*table
+Proxied environment table (_ENV), enabling contextual overrides
+
+#GLOBALS
+table
+Raw global table (original _G)
+
+----
+
+$Func
 
 #rawnext
 `obj`(table) `key`
@@ -17,20 +29,20 @@ $Functions
 `iter`((`obj`(table),`key`)->(`key`,`value`)), `obj`(table)
 
 #rawinext
-`obj`(table), `idx`(nil|Natural)
-`idx`(nil|Natural), `value`
+`obj`(table), `idx`(nil|+Int)
+`idx`(nil|+Int), `value`
 
 #inext
-`obj`(table), `idx`(nil|Natural)
-`idx`(nil|Natural), `value`
+`obj`(table), `idx`(nil|+Int)
+`idx`(nil|+Int), `value`
 
 #rawipairs
 `obj`(table)
-`iter`((`obj`(table),`idx`(nil|Natural))->(`idx`(nil|Natural),`value`)), `obj`(table)
+`iter`((`obj`(table),`idx`(nil|+Int))->(`idx`(nil|+Int),`value`)), `obj`(table)
 
 #qrawipairs
 `obj`(table)
-`iter`((`obj`(table),`idx`(nil|Natural))->(`idx`(nil|Natural),`value`)), `obj`(table)
+`iter`((`obj`(table),`idx`(nil|+Int))->(`idx`(nil|+Int),`value`)), `obj`(table)
 
 #getfenv
 `func`((...)->(...))
@@ -38,20 +50,20 @@ $Functions
 
 #setfenv
 `func`((...)->(...)) `env`(table)
-----
+>>>>
 
 #table.rawinsert
-`data`(Array), `pos`(nil|Natural) ~ value
-----
+`data`(Array), `pos`(nil|+Int) ~ value
+>>>>
 
 #table.insert
-`data`(Array), `pos`(nil|Natural) ~ value
-----
+`data`(Array), `pos`(nil|+Int) ~ value
+>>>>
 
 #table.rawremove
-`data`(Array), `pos`(nil|Natural)
+`data`(Array), `pos`(nil|+Int)
 `value`
 
 #table.remove
-`data`(Array), `pos`(nil|Natural)
+`data`(Array), `pos`(nil|+Int)
 `value`

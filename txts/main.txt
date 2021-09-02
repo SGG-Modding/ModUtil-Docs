@@ -1,41 +1,44 @@
-$Tables
+$Data
 
 #Mod.Data
->>> Special proxy for the `ModData` global table as a save-safety preserving interface
+*table
+Special proxy for the `ModData` global table as a save-safety preserving interface
 
-$Functions
+----
+
+$Func
 
 #Mod.Register
 `modName`(string) ~ `parent`(nil|table)
 `mod`(Mod)
 
-----
->>> Creates a new table `mod` with `ModUtil.Mod` as its fallback metamethod, and assigns it to the field [`modName`] in the `parent` (or global) table, and associates the path to the table in `ModUtil.Identifiers`
+>>>>
+----Creates a new table `mod` with `ModUtil.Mod` as its fallback metamethod, and assigns it to the field [`modName`] in the `parent` (or global) table, and associates the path to the table in `ModUtil.Identifiers`
 
 #Entangled.ModData
 `value`(table)
 `proxy`(*table)
 
-----
->>> Returns a `proxy` for the `value` such that any operations on the `proxy` preserve the save-safety (in Hades) of the `value` table
+>>>>
+----Returns a `proxy` for the `value` such that any operations on the `proxy` preserve the save-safety (in Hades) of the `value` table
 
 #Mod.Data
 `mod`(Mod)
 `proxy`(*table)
 
-----
->>> Retrieves a `proxy` for the saved data table (value in the `ModData` global table) corresponding to the `mod` (creates the data table (and `ModData`) if it doesn't yet exist) via `ModUtil.Entangled.ModData`
+>>>>
+----Retrieves a `proxy` for the saved data table (value in the `ModData` global table) corresponding to the `mod` (creates the data table (and `ModData`) if it doesn't yet exist) via `ModUtil.Entangled.ModData`
 
 #LoadOnce
 `func`((`args`)->())
-----
+>>>>
 
-----
->>> Enlists `func` to be called once on the next `OnAnyLoad` trigger
+>>>>
+----Enlists `func` to be called once on the next `OnAnyLoad` trigger
 
 #CancelLoadOnce
 `func`((`args`)->())
-----
+>>>>
 
-----
->>> Cancels the enlistment of `func` by `ModUtil.LoadOnce`
+>>>>
+----Cancels the enlistment of `func` by `ModUtil.LoadOnce`
