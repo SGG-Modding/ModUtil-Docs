@@ -1,187 +1,187 @@
-RegisterMod
+#RegisterMod
 `modName`(string) ~ `parent`(nil|table)
 `mod`(Mod)
 
-ValueString
+#ValueString
 `object`
 `repr`(string)
 
-KeyString
+#KeyString
 `object`
 `repr`(string)
 
-TableKeysString
+#TableKeysString
 `object`(table)
 `repr`(string)
 
-ToShallowString
+#ToShallowString
 `object`
 `repr`(string)
 
-ToDeepString
+#ToDeepString
 `object`
 `repr`(string)
 
-ToDeepNoNamespacesString
+#ToDeepNoNamespacesString
 `object`
 `repr`(string)
 
-ToDeepNamespacesString
+#ToDeepNamespacesString
 `object`
 `repr`(string)
 
-JoinStrings
+#JoinStrings
 `sep`(string), ...(string)
 `out`(string)
 
-ChunkText
+#ChunkText
 `text`(string), `chunkSize`(Natural), `maxChunks`(Natural)
 `chunks`(Array{string})
 
-ReplaceTable
+#ReplaceTable
 `target`(table), `data`(table)
 ----
 
-IsUnKeyed
+#IsUnKeyed
 `in`(table)
 `keyed`(boolean)
 
-PrintToFile
+#PrintToFile
 ...(string)
-----
+#----
 
-DebugPrint
+#DebugPrint
 ...(string)
-----
+#----
 
-PrintTraceback
+#PrintTraceback
 `level`(Natural|nil)
 ----
 
-PrintNamespaces
+#PrintNamespaces
 `level`(Natural|nil)
 ----
 
-PrintVariables
+#PrintVariables
 `level`(Natural|nil)
 ----
 
-Slice
+#Slice
 `state`(Array), `start`(Integer|nil), `stop`(Integer|nil), `step`(Integer|nil)
 `slice`(Array)
 
-NewTable
+#NewTable
 `parent`(table), `key`(~nil)
 `tbl`(table)
 
-SafeGet
+#SafeGet
 `base`(table), `index`(Array)
 `result`
 
-SafeSet
+#SafeSet
 `base`(table), `index`(Array), `value`
 `success`(boolean)
 
-MapNilTable
+#MapNilTable
 `in`(table), `nil`(table)
 `in`(table)
 
-MapSetTable
+#MapSetTable
 `in`(table), `set`(table)
 `in`(table)
 
-JoinIndexArrays
+#JoinIndexArrays
 ...(Array)
-`out`(Array)
+#`out`(Array)
 
-PathToIndexArray
+#PathToIndexArray
 `path`(Path)
 `index`(Array)
 
-PathGet
+#PathGet
 `path`(Path)
 `value`
 
-PathSet
+#PathSet
 `path`(Path), `value`
 `success`(boolean)
 
-WrapFunction
+#WrapFunction
 `base`(table), `index`(Array), `wrap`((`base`,...)->(...)), `mod`(Mod)
 `success`(boolean)
 
-RewrapFunction
+#RewrapFunction
 `base`(table), `index`(Array)
 `success`(boolean)
 
-UnwrapFunction
+#UnwrapFunction
 `base`(table), `index`(Array)
 `success`(boolean)
 
-WrapBaseFunction
+#WrapBaseFunction
 `path`(Path), `wrap`((`base`, ...)->(...)), `mod`(Mod)
 `success`(boolean)
 
-RewrapBaseFunction
+#RewrapBaseFunction
 `path`(Path)
 `success`(boolean)
 
-UnwrapBaseFunction
+#UnwrapBaseFunction
 `path`(Path)
 `success`(boolean)
 
-BaseOverride
+#BaseOverride
 `path`(Path), `value`
 `success`(boolean)
 
-GetOriginalValue
+#GetOriginalValue
 `base`(table), `index`(Array)
 `value`
 
-GetOriginalBaseValue
+#GetOriginalBaseValue
 `path`(Path)
 `value`
 
-RawInterface
+#RawInterface
 `object`(table)
 `raw`(*table)
 
-MapVars
+#MapVars
 `map`((in)->(out)), ...
 ...
-
+#
 StackedUpValues
-`func`((...)->(...)|Natural|nil)
+#`func`((...)->(...)|Natural|nil)
 `ups`(*table)
 
-StackedLocals
+#StackedLocals
 `level`(Natural|nil)
 `locals`(*table)
 
-LocalValues
+#LocalValues
 `level`(Natural|nil)
 `locals`(*table)
 
-LocalNames
+#LocalNames
 `level`(Natural|nil)
 `locals`(*table)
 
-GetBaseBottomUpValues
+#GetBaseBottomUpValues
 `path`(Path)
 `ups`(*table)
 
-MapTable
+#MapTable
 `map`((`in`)->(`out`)), `data`(table)
 `mapped`(table)
 
-WrapWithinFunction
+#WrapWithinFunction
 `base`(table), `index`(Array), `env`(Array), `wrap`((`base`, ...)->(...)), `mod`(Mod)
 `success`(boolean)
 
-WrapBaseWithinFunction
+#WrapBaseWithinFunction
 `path`(Path), `env`(Path), `wrap`((`base`, ...)->(...)), `mod`(Mod)
 `success`(boolean)
 
-BaseOverrideWithinFunction
+#BaseOverrideWithinFunction
 `path`(Path), `env`(Path), `value`, `mod`(Mod)
 `success`(boolean)

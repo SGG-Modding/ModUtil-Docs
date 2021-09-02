@@ -1,95 +1,95 @@
-IndexArray.Wrap
+#IndexArray.Wrap
 `base`(table), `index`(Array), `wrap`((`base`,...)->(...)), `mod`(Mod)
 `success`(boolean)
 
-IndexArray.Context.Wrap
+#IndexArray.Context.Wrap
 `base`(table), `index`(Array), `context`(()->()), `mod`(Mod)
 `success`(boolean)
 
-IndexArray.Context.Wrap.Static
+#IndexArray.Context.Wrap.Static
 `base`(table), `index`(Array), `context`(()->()), `mod`(Mod)
 `success`(boolean)
 
-IndexArray.Decorate
+#IndexArray.Decorate
 `base`(table), `index`(Array), `deco`((`base`)->(`post`)), `mod`(Mod)
 `success`(boolean)
 
-IndexArray.Decorate.Pop
+#IndexArray.Decorate.Pop
 `base`(table), `index`(Array)
 `success`(boolean)
 
-IndexArray.Decorate.Refresh
+#IndexArray.Decorate.Refresh
 `base`(table), `index`(Array)
 `success`(boolean)
 
-IndexArray.Override
+#IndexArray.Override
 `base`(table), `index`(Array), `value`, `mod`(Mod)
 `success`(boolean)
 
-IndexArray.Restore
+#IndexArray.Restore
 `base`(table), `index`(Array)
 `success`(boolean)
 
-IndexArray.Overriden
+#IndexArray.Overriden
 `base`(table), `index`(Array)
 `value`
 
-IndexArray.Original
+#IndexArray.Original
 `base`(table), `index`(Array)
 `value`
 
-IndexArray.ReferFunction
+#IndexArray.ReferFunction
 `base`(table), `index`(Array)
 `func`((...)->(...))
 
-IndexArray.ReferTable
+#IndexArray.ReferTable
 `base`(table), `index`(Array)
 `table`(*table)
 
-Path.Wrap
+#Path.Wrap
 `path`(Path), `wrap`((`base`,...)->(...)), `mod`(Mod)
 `success`(boolean)
 
-Path.Context.Wrap
+#Path.Context.Wrap
 `path`(Path), `context`(()->()), `mod`(Mod)
 `success`(boolean)
 
-Path.Context.Wrap.Static
+#Path.Context.Wrap.Static
 `path`(Path), `context`(()->()), `mod`(Mod)
 `success`(boolean)
 
-Path.Decorate
+#Path.Decorate
 `path`(Path), `deco`((`base`)->(`post`)), `mod`(Mod)
 `success`(boolean)
 
-Path.Decorate.Pop
+#Path.Decorate.Pop
 `path`(Path)
 `success`(boolean)
 
-Path.Decorate.Refresh
+#Path.Decorate.Refresh
 `path`(Path)
 `success`(boolean)
 
-Path.Override
+#Path.Override
 `path`(Path), `value`, `mod`(Mod)
 `success`(boolean)
 
-Path.Restore
+#Path.Restore
 `path`(Path)
 `success`(boolean)
 
-Path.Overriden
+#Path.Overriden
 `path`(Path)
 `value`
 
-Path.Original
+#Path.Original
 `path`(Path)
 `value`
 
-Path.ReferFunction
+#Path.ReferFunction
 `path`(Path)
 `func`((...)->(...))
 
-Path.ReferTable
+#Path.ReferTable
 `path`(Path)
 `table`(*table)

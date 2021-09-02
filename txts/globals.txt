@@ -1,55 +1,55 @@
-rawnext
+#rawnext
 `obj`(table) `key`
 `key`, `value`
 
-next
+#next
 `obj`(table) `key`
 `key`, `value`
 
-rawpairs
+#rawpairs
 `obj`(table)
 `iter`((`obj`(table),`key`)->(`key`,`value`)), `obj`(table)
 
-qrawpairs
+#qrawpairs
 `obj`(table)
 `iter`((`obj`(table),`key`)->(`key`,`value`)), `obj`(table)
 
-rawinext
+#rawinext
 `obj`(table), `idx`(nil|Natural)
 `idx`(nil|Natural), `value`
 
-inext
+#inext
 `obj`(table), `idx`(nil|Natural)
 `idx`(nil|Natural), `value`
 
-rawipairs
+#rawipairs
 `obj`(table)
 `iter`((`obj`(table),`idx`(nil|Natural))->(`idx`(nil|Natural),`value`)), `obj`(table)
 
-qrawipairs
+#qrawipairs
 `obj`(table)
 `iter`((`obj`(table),`idx`(nil|Natural))->(`idx`(nil|Natural),`value`)), `obj`(table)
 
-getfenv
+#getfenv
 `func`((...)->(...))
 `env`(nil|table)
 
-setfenv
+#setfenv
 `func`((...)->(...)) `env`(table)
 ----
 
-table.rawinsert
+#table.rawinsert
 `data`(Array), `pos`(nil|Natural) ~ value
 ----
 
-table.insert
+#table.insert
 `data`(Array), `pos`(nil|Natural) ~ value
 ----
 
-table.rawremove
+#table.rawremove
 `data`(Array), `pos`(nil|Natural)
 `value`
 
-table.remove
+#table.remove
 `data`(Array), `pos`(nil|Natural)
 `value`
