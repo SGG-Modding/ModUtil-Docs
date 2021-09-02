@@ -37,17 +37,17 @@
 #Args.Map
 `map`((`in`)->(`out`)), ...
 ...
-#
-Args.Take
-#`n`(Natural), ...
+
+#Args.Take
+`n`(Natural), ...
 ...
-#
-Args.Drop
-#`n`(Natural), ...
+
+#Args.Drop
+`n`(Natural), ...
 ...
-#
-Table.Map
-#`tbl`(table), `map`((in)->(out))
+
+#Table.Map
+`tbl`(table), `map`((in)->(out))
 `out`(tbl)
 
 #Table.Mutate
@@ -112,7 +112,7 @@ Table.Map
 
 #Print
 ...
-#----
+----
 
 #Print.ToFile
 `file`(string|File), ...
@@ -120,7 +120,7 @@ Table.Map
 
 #Print.Debug
 ...
-#----
+----
 
 #Print.Traceback
 `level`(Natural|nil)
@@ -141,9 +141,9 @@ Table.Map
 #DebugCall
 `func`((...)->(...)), ...
 ...
-#
-Array.Slice
-#`state`(Array), `start`(Integer|nil), `stop`(Integer|nil), `step`(Integer|nil)
+
+#Array.Slice
+`state`(Array), `start`(Integer|nil), `stop`(Integer|nil), `step`(Integer|nil)
 `slice`(Array)
 
 #Array.Copy
@@ -152,7 +152,7 @@ Array.Slice
 
 #Array.Join
 ...(Array)
-#`out`(Array)
+`out`(Array)
 
 #Table.Copy
 `data`(table)
@@ -196,7 +196,7 @@ Array.Slice
 
 #Path.Join
 ...(Path)
-#`path`(Path)
+`path`(Path)
 
 #Path.Map
 `path`(Path)
@@ -264,7 +264,7 @@ Array.Slice
 
 #Entangled.Union
 ...(table)
-#`union`(*table)
+`union`(*table)
 
 #Entangled.Union.Add
 `union`(*table), ...(table)

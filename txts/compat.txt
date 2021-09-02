@@ -48,11 +48,11 @@
 
 #PrintToFile
 ...(string)
-#----
+----
 
 #DebugPrint
 ...(string)
-#----
+----
 
 #PrintTraceback
 `level`(Natural|nil)
@@ -92,7 +92,7 @@
 
 #JoinIndexArrays
 ...(Array)
-#`out`(Array)
+`out`(Array)
 
 #PathToIndexArray
 `path`(Path)
@@ -149,9 +149,9 @@
 #MapVars
 `map`((in)->(out)), ...
 ...
-#
-StackedUpValues
-#`func`((...)->(...)|Natural|nil)
+
+#StackedUpValues
+`func`((...)->(...)|Natural|nil)
 `ups`(*table)
 
 #StackedLocals
