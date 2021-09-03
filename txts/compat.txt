@@ -109,7 +109,7 @@ $Func
 `success`(boolean)
 
 #WrapFunction
-`base`(table), `index`(Array), `wrap`((`base`,...)->(...)), `mod`(Mod)
+`base`(table), `index`(Array), `wrap`((`base`((...)->(...)),...)->(...)), `mod`(Mod)
 `success`(boolean)
 
 #RewrapFunction
@@ -138,11 +138,11 @@ $Func
 
 #GetOriginalValue
 `base`(table), `index`(Array)
-`value`
+`value`(Ref)
 
 #GetOriginalBaseValue
 `path`(Path)
-`value`
+`value`(Ref)
 
 #RawInterface
 `object`(table)

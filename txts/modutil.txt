@@ -377,36 +377,36 @@ $Func
 >>>>
 
 #Decorate
-`base`, `deco`((`base`)->(`post`)), `mod`(Mod)
-`post`
+`base`(Ref), `deco`((`base`(Ref))->(`post`(Ref))), `mod`(Mod)
+`post`(Ref)
 
 #Wrap
-`base`, `wrap`((`base`,...)->(...)), `mod`(Mod)
+`base`((...)->(...)), `wrap`((`base`((...)->(...)),...)->(...)), `mod`(Mod)
 `func`((...)->(...))
 
 #Decorate.Pop
-`object`
-`base`
+`object`(Ref)
+`base`(Ref)
 
 #Decorate.Refresh
-`base`
-`refbase`
+`base`(Ref)
+`refbase`(Ref)
 
 #Override
-`base`, `value`, `mod`(Mod)
-`value`
+`base`(Ref), `value`(Ref), `mod`(Mod)
+`value`(Ref)
 
 #Restore
-`base`
-`refbase`
+`base`(Ref)
+`refbase`(Ref)
 
 #Overriden
-`object`
-`value`
+`object`(Ref)
+`value`(Ref)
 
 #Original
-`object`
-`value`
+`object`(Ref)
+`value`(Ref)
 
 #ReferFunction
 `get`((...)->(`obj`)), ...

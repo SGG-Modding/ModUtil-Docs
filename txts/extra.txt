@@ -13,7 +13,7 @@ $Func
 `success`(boolean)
 
 #IndexArray.Decorate
-`base`(table), `index`(Array), `deco`((`base`)->(`post`)), `mod`(Mod)
+`base`(table), `index`(Array), `deco`((`base`(Ref))->(`post`(Ref))), `mod`(Mod)
 `success`(boolean)
 
 #IndexArray.Decorate.Pop
@@ -34,11 +34,11 @@ $Func
 
 #IndexArray.Overriden
 `base`(table), `index`(Array)
-`value`
+`value`(Ref)
 
 #IndexArray.Original
 `base`(table), `index`(Array)
-`value`
+`value`(Ref)
 
 #IndexArray.ReferFunction
 `base`(table), `index`(Array)
@@ -49,7 +49,7 @@ $Func
 `table`(*table)
 
 #Path.Wrap
-`path`(Path), `wrap`((`base`,...)->(...)), `mod`(Mod)
+`path`(Path), `deco`((`base`(Ref))->(`post`(Ref))), `mod`(Mod)
 `success`(boolean)
 
 #Path.Context.Wrap
@@ -82,11 +82,11 @@ $Func
 
 #Path.Overriden
 `path`(Path)
-`value`
+`value`(Ref)
 
 #Path.Original
 `path`(Path)
-`value`
+`value`(Ref)
 
 #Path.ReferFunction
 `path`(Path)
