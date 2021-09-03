@@ -1,27 +1,27 @@
 $Data
 
 #Mods.Data
-*table
-Map from path to mod object for registered mods
+*table[Path]{Mod}
+Collection of all the registered mods by their canonical path
 
 #Mods.Inverse
-*table
-Map from mod object to path for registered mods
+*table[Mod]{Path}
+Lookup of the canonical path by mod object
 
 #Identifiers.Data
-*table
+*table[Ref]{string}
 Map from object to associated name (name is part of the object's string representation)
 
 #Identifiers.Inverse
-*table
+*table[string]{Ref}
 Map from name to associated object (name is part of the object's string representation)
 
 #Node.Data
-*table
+*table[string]{*table}
 Collection of traversal nodes for use as special keys in index arrays
 
 #Node.Inverse
-*table
+*table{*table}[string]
 Lookup table of traversal nodes to distinguish them from regular keys
 
 ----
@@ -37,11 +37,11 @@ $Func
 `raw`(*table)
 
 #Callable
-`obj`(table|((...)->(...)))
+`obj`(table|(...)->(...))
 `callable`(boolean)
 
 #Callable.Get
-`obj`(table|((...)->(...)))
+`obj`(table|(...)->(...))
 `parent`(nil|table), `func`(nil|(`self`,...)->(...))
 
 #Callable.Set
