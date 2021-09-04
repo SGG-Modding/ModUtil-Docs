@@ -380,17 +380,25 @@ $Func
 `base`(Ref), `deco`((`base`(Ref))->(`post`(Ref))), `mod`(Mod)
 `post`(Ref)
 
-#Wrap
-`base`((...)->(...)), `wrap`((`base`((...)->(...)),...)->(...)), `mod`(Mod)
-`func`((...)->(...))
-
 #Decorate.Pop
+`object`(Ref)
+`base`(Ref)
+
+#Decorate.Inject
+`base`(Ref), `deco`((`base`(Ref))->(`post`(Ref))), `mod`(Mod)
+`post`(Ref)
+
+#Decorate.Eject
 `object`(Ref)
 `base`(Ref)
 
 #Decorate.Refresh
 `base`(Ref)
 `refbase`(Ref)
+
+#Wrap
+`base`((...)->(...)), `wrap`((`base`((...)->(...)),...)->(...)), `mod`(Mod)
+`func`((...)->(...))
 
 #Override
 `base`(Ref), `value`(Ref), `mod`(Mod)

@@ -20,6 +20,14 @@ $Func
 `base`(table), `index`(Array)
 `success`(boolean)
 
+#IndexArray.Decorate.Inject
+`base`(table), `index`(Array), `deco`((`base`(Ref))->(`post`(Ref))), `mod`(Mod)
+`success`(boolean)
+
+#IndexArray.Decorate.Eject
+`base`(table), `index`(Array)
+`success`(boolean)
+
 #IndexArray.Decorate.Refresh
 `base`(table), `index`(Array)
 `success`(boolean)
@@ -65,6 +73,14 @@ $Func
 `success`(boolean)
 
 #Path.Decorate.Pop
+`path`(Path)
+`success`(boolean)
+
+#Path.Decorate.Inject
+`path`(Path), `deco`((`base`)->(`post`)), `mod`(Mod)
+`success`(boolean)
+
+#Path.Decorate.Eject
 `path`(Path)
 `success`(boolean)
 
