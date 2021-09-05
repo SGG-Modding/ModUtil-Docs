@@ -325,8 +325,8 @@ $Func
 >>>>
 
 #Context.Call
-`func`((...)->(...)), `context`(()->())
->>>>
+`func`((...)->(...)), `context`(()->()), ...
+...
 
 #Context.Wrap
 `func`((...)->(...)), `context`(()->()), `mod`(Mod)
