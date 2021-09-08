@@ -32,65 +32,113 @@ $Func
 `data`(table), `meta`(nil|table)
 `proxy`(*table)
 
+>>>>
+----Creates a `proxy` of `data` using `meta` to define the interface (`meta` accesses `data` via ModUtil.Internal.objectData)
+
 #Raw
 `obj`(table)
 `raw`(*table)
+
+>>>>
+----Creates a proxy `raw` of `obj`, where table operations ignore the metatable of `obj`
 
 #Callable
 `obj`(table|(...)->(...))
 `callable`(boolean)
 
+>>>>
+----Checks if `obj` is callable (either a function or has the __call metamethod mapped to a callable).
+
 #Callable.Get
 `obj`(table|(...)->(...))
 `parent`(nil|table), `func`(nil|(`self`,...)->(...))
+
+>>>>
+----Gets the function `func` that the callable `obj` uses, along with the mutable `parent` non-function callable if it exists.
 
 #Callable.Set
 `obj`(table), `func`(nil|(`self`,...)->(...))
 `parent`(nil|*table), `func`(nil|(`self`,...)->(...))
 
+>>>>
+----Sets the __call metamethod of `obj` to `func` (`obj` becomes the `parent` to `func` in this sense)
+
 #Callable.Map
-`obj`(table), `func`(nil|(`self`,...)->(...))
-`parent`(nil|*table), `func`(nil|(`self`,...)->(...))
+`obj`(table), `map`((`func`,...)->(`newfunc`)), ...
+`parent`(nil|*table), `newfunc`(nil|(`self`,...)->(...))
+
+>>>>
+----Changes the function `func` the callable `obj` uses into `newfunc` by applying `map` and mutating `parent`
 
 #Callable.Func.Get
 `obj`(table|((...)->(...)))
 `func`(nil|(`self`,...)->(...))
 
+>>>>
+----Gets the function `func` that the callable `obj` uses
+
 #Callable.Func.Set
 `obj`(table), `func`(nil|(`self`,...)->(...))
 `func`(nil|(`self`,...)->(...))
 
+>>>>
+----Sets the __call metamethod of `obj` to `func`
+
 #Callable.Func.Map
-`obj`(table), `func`(nil|(`self`,...)->(...))
+`obj`(table), `map`((`func`,...)->(`newfunc`)), ...
 `func`(nil|(`self`,...)->(...))
+
+>>>>
+----Changes the function `func` the callable `obj` uses into `newfunc` by applying `map`
 
 #Args.Map
 `map`((`in`)->(`out`)), ...
 ...
 
+>>>>
+----Applies `map` to each argument and returns the results
+
 #Args.Take
 `n`(+Int), ...
 ...
+
+>>>>
+----Returns only the first `n` arguments
 
 #Args.Drop
 `n`(+Int), ...
 ...
 
+>>>>
+----Skips over the first `n` arguments and returns the rest
+
 #Table.Map
 `tbl`(table), `map`((in)->(out))
 `out`(tbl)
+
+>>>>
+----Creates a new table `out` comprised of applying `map` to each value of `tbl` 
 
 #Table.Mutate
 `tbl`(table), `map`((in)->(out))
 >>>>
 
+>>>>
+----Modifies `tbl` by setting each value to its result after applying `map`
+
 #Table.Replace
 `target`(table), `data`(table)
 >>>>
 
+>>>>
+----Modifies `target` by replacing all its entries with those from `data`
+
 #Table.UnKeyed
-`in`(table)
+`tbl`(table)
 `keyed`(boolean)
+
+>>>>
+----Determines if `tbl` is suitable to use with functions designed for Arrays (the keys are all successive indices)
 
 #String.Join
 `sep`(string), ...(string)
