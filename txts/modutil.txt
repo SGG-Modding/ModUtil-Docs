@@ -33,7 +33,7 @@ $Func
 `proxy`(*table)
 
 >>>>
-----Creates a `proxy` of `data` using `meta` to define the interface (`meta` accesses `data` via ModUtil.Internal.objectData)
+----Creates a `proxy` of `data` using `meta` to define the interface (`meta` accesses `data` via `ModUtil.Internal.objectData` so generally should only be a member of `ModUtil.Metatables`)
 
 #Raw
 `obj`(table)
