@@ -13,7 +13,7 @@ $Func
 `mod`(Mod)
 
 >>>>
-----Creates a new table `mod` with `ModUtil.Mod` as its fallback metamethod, and assigns it to the field [`modName`] in the `parent` (or global) table, and associates the path to the table in `ModUtil.Identifiers`
+----Creates a new table `mod` with metatable `ModUtil.Metatables.Mod`, and assigns it to the field [`modName`] in the `parent` (or global) table, and associates the path to the table in `ModUtil.Identifiers`
 
 #Entangled.ModData
 `value`(table)
