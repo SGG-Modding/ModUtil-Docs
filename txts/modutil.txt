@@ -465,9 +465,9 @@ $Func
 `value`(Ref)
 
 #ReferFunction
-`get`((...)->(`obj`)), ...
+`get`(()->(`obj`))
 `func`((...)->(...))
 
 #ReferTable
-`get`((...)->(`obj`)), ...
+`get`(()->(`obj`))
 `table`(*table)
