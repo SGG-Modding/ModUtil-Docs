@@ -8,6 +8,10 @@ $Func
 `base`(table), `index`(Array), `wrap`((`base`,...)->(...)), `mod`(Mod)
 `success`(boolean)
 
+#IndexArray.Context.Env
+`base`(table), `index`(Array), `context`(()->())
+`success`(boolean)
+
 #IndexArray.Context.Wrap
 `base`(table), `index`(Array), `context`(()->()), `mod`(Mod)
 `success`(boolean)
@@ -66,6 +70,10 @@ $Func
 
 #Path.Wrap.Bottom
 `path`(Path), `deco`((`base`(Ref))->(`post`(Ref))), `mod`(Mod)
+`success`(boolean)
+
+#Path.Context.Env
+`path`(Path), `context`(()->())
 `success`(boolean)
 
 #Path.Context.Wrap

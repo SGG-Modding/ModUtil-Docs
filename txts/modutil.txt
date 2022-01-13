@@ -376,6 +376,10 @@ $Func
 `func`((...)->(...)), `context`(()->()), ...
 ...
 
+#Context.Env
+`func`((...)->(...)), `context`(()->())
+>>>>
+
 #Context.Wrap
 `func`((...)->(...)), `context`(()->()), `mod`(Mod)
 >>>>
