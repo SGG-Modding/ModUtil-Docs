@@ -9,7 +9,7 @@ Number of lines of text visible the next time a fresh print stack is created
 Number of lines of text stored in the buffer of the next fresh print stack created
 
 #Triggers
-table*
+*table
 Triggers refer to these tables instead of being purely anonymous, for example: "ModUtil.Hades.Triggers.OnHit.Combat.1.Call" is a path you could wrap.
 
 ----
