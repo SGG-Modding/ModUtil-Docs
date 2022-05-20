@@ -8,6 +8,10 @@ Number of lines of text visible the next time a fresh print stack is created
 +Int
 Number of lines of text stored in the buffer of the next fresh print stack created
 
+#Triggers
+table*
+Triggers refer to these tables instead of being purely anonymous, for example: "ModUtil.Hades.Triggers.OnHit.Combat.1.Call" is a path you could wrap.
+
 ----
 
 $Func
@@ -95,7 +99,3 @@ $Func
 
 >>>>
 ----Closes a Yes/No dialog, called after any of its three buttons are pressed.
-
-#RandomElement
-`data`(table), `rng`(Rng)
-`element`
