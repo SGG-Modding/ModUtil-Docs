@@ -44,6 +44,14 @@ $Func
 `obj`(table)
 `iter`((`obj`(table),`idx`(nil|+Int))->(`idx`(nil|+Int),`value`)), `obj`(table)
 
+#rawtostring
+`obj`
+`repr(string)`
+
+#tostring
+`obj`
+`repr(string)`
+
 #getfenv
 `func`((...)->(...))
 `env`(nil|table)
