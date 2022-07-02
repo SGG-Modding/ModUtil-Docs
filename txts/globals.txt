@@ -88,10 +88,6 @@ $Func
 `list`(Array), `sep`(nil|string), `i`(nil|Int), `j`(nil|Int)
 `joined(string)`
 
-#table.qrawconcat
-`list`(Array), `sep`(nil|string), `i`(nil|Int), `j`(nil|Int)
-`joined(string)`
-
 #table.concat
 `list`(Array), `sep`(nil|string), `i`(nil|Int), `j`(nil|Int)
 `joined(string)`

@@ -173,19 +173,19 @@ $Func
 `repr`(string)
 
 #ToString.Shallow
-`object`
+`object`, `limit`(nil|Nat)
 `repr`(string)
 
 #ToString.Deep
-`object`, `seen`(nil|table)
+`object`, `limit`(nil|Nat), `depth`(nil|Nat)
 `repr`(string)
 
 #ToString.Deep.NoNamespaces
-`object`, `seen`(nil|table)
+`object`, `limit`(nil|Nat), `depth`(nil|Nat)
 `repr`(string)
 
 #ToString.Deep.Namespaces
-`object`, `seen`(nil|table)
+`object`, `limit`(nil|Nat), `depth`(nil|Nat)
 `repr`(string)
 
 #Print
