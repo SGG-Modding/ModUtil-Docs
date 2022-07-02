@@ -69,21 +69,21 @@ $Func
 `value`
 
 #table.rawunpack
-`list`(Array), `i`(nil|+Int), `j`(nil|+Int)
+`list`(Array), `i`(nil|Int), `j`(nil|Int)
 `...`
 
 #table.unpack
-`list`(Array), `i`(nil|+Int), `j`(nil|+Int)
+`list`(Array), `i`(nil|Int), `j`(nil|Int)
 `...`
 
 #table.rawconcat
-`list`(Array), `sep`(nil|string), `i`(nil|+Int), `j`(nil|+Int)
+`list`(Array), `sep`(nil|string), `i`(nil|Int), `j`(nil|Int)
 `joined(string)`
 
 #table.qrawconcat
-`list`(Array), `sep`(nil|string), `i`(nil|+Int), `j`(nil|+Int)
+`list`(Array), `sep`(nil|string), `i`(nil|Int), `j`(nil|Int)
 `joined(string)`
 
 #table.concat
-`list`(Array), `sep`(nil|string), `i`(nil|+Int), `j`(nil|+Int)
+`list`(Array), `sep`(nil|string), `i`(nil|Int), `j`(nil|Int)
 `joined(string)`
