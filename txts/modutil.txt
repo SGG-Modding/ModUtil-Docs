@@ -260,6 +260,10 @@ $Func
 `in`(table), `set`(table)
 `in`(table)
 
+#Table.MergeKeyed
+`in`(table), `set`(table)
+`in`(table)
+
 #IndexArray.Get
 `base`(table), `index`(table)
 `result`
